@@ -10,5 +10,6 @@ Now check in your python ide by import this module with name :
 import APres.
 
 You can also make changes in it and ackowledge me about them too. Feel free to use the code.
+Please make sure to go through the licence file before taking any step further.
 
 Thank You.
