@@ -3,8 +3,10 @@
 # a = first value
 # b = second value_value is the value of the n term
 # nth_term is the t
-# # d = difference
-# # nterm of the n_value
+# d = difference
+# nterm of the n_value
+
+# Defining Functions for the various commands and formulas
 
 def nth_value():
     '''
@@ -16,7 +18,7 @@ def nth_value():
         n = float(input("Enter the nth term :"))
     except Exception as e:
         print("Please enter the appropriate values..", e)
-        return nth_value()
+        return rerun()
     d = b - a
     nth = a + (n - 1)*d
     print (f"The value of {n}th term is {nth} ")
@@ -30,8 +32,8 @@ def nth_term():
         b = float(input("Enter the 2nd value :"))
         nth_val= float(input("Enter the value of the term :"))
     except Exception as e :
-        print("Please enter the appropriate values.." , e)
-        return nth_term()
+        print("Please enter the appropriate values :")
+        return rerun()
     d = b - a
     n_term = (nth_val - a + d)/d
     print (f"The term of {nth_val}th value is {n_term} ")
@@ -46,7 +48,7 @@ def Sum_n():
         n = float(input("Enter the number of nth terms :"))
     except Exception as e :
         print("Please enter the appropriate values :" , e)
-        return rerun()                          # rerun for now..
+        return rerun()
     d = b - a
     Sum_n = n/2*(2*a + (n - 1)*d)
     print(f"\nThe sum of first {n} terms is {Sum_n}")
@@ -60,10 +62,11 @@ def Sum_all():
         l = float(input("Enter the last term :"))
         n = float(input("Enter the nth term :"))
     except Exception as e:
-        print("Please enter the appropriate values :" , e)
-        return Sum_all()
+        print("Please enter the appropriate values :" )
+        return rerun()
     sum_all = (a + l)*n/2
     print(f"\n The sum of all terms is {sum_all}")
+
 
 # Running in loop
 def run():
@@ -74,8 +77,14 @@ def run():
           "________For finding nth_term press 2_______\n"
           "________For finding sum of first n terms press 3______\n"
           "________For finding Sum of all terms press 4_________")
+
     # Input statement for using required formulae
-    num = int(input("Enter what sort for calculation you what :"))
+    try:
+        num = int(input("Enter what sort for calculation you what :"))
+    except Exception as e:
+        print("Please enter appropriate values :")
+        return run()
+    # Running the while loop
     while True:
         if num == 1:
             nth_value()
@@ -92,7 +101,7 @@ def run():
         else:
             print("Please enter appropriate number..!!")
         break
-    # Reruning the program..
+    # Rerunning the program..
     while True:
         rerun()
 
