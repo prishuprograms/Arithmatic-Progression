@@ -1,0 +1,4 @@
+This piece of code is licensed and totally belongs to me. But anyone 
+finds something needful to change can do chnages by forking the repositry and creating a 
+pul request. 
+Thank You
