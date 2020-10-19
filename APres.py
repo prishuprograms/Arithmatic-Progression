@@ -2,6 +2,7 @@
 # Finding nth term value
 # a = first value
 # b = second value_value is the value of the n term
+# c = second value
 # nth_term is the t
 # d = difference
 # nterm of the n_value
@@ -15,11 +16,13 @@ def nth_value():
     try :
         a = float(input("Enter the 1st term :"))
         b = float(input("Enter th 2nd term :"))
+        c = float(input("Enter the 3rd term:"))
         n = float(input("Enter the nth term :"))
     except Exception as e:
         print("Please enter the appropriate values..", e)
         return rerun()
     d = b - a
+    c = a + b
     nth = a + (n - 1)*d
     print (f"The value of {n}th term is {nth} ")
 
